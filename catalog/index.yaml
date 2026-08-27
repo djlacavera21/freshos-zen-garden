@@ -1,0 +1,37 @@
+# Harbor Flavor catalog — independent of the Grok App.
+# Premium+ upload is a proposed App feature; this file is the working catalog.
+apiVersion: harbor-catalog/1.0
+source: https://github.com/djlacavera21/freshos-zen-garden
+updated: 2026-08-27
+flavors:
+  - id: zen-garden
+    name: FreshOS Zen Garden
+    version: 1.0.0
+    path: flavors/official/zen-garden
+    official: true
+    review: approved
+    tags: [official, zen-garden]
+  - id: research-harbor
+    name: Research Harbor
+    version: 1.0.0
+    path: flavors/examples/research-harbor
+    official: false
+    review: example
+    tags: [research, archives, offline]
+  - id: war-room-harbor
+    name: War Room Harbor
+    version: 1.0.0
+    path: flavors/examples/war-room-harbor
+    official: false
+    review: example
+    tags: [strategy, war-room]
+  - id: airgap-tui
+    name: Air-Gap TUI Station
+    version: 1.0.0
+    path: flavors/examples/airgap-tui
+    official: false
+    review: example
+    tags: [airgap, tui, minimal]
+submit:
+  today: "Open a pull request adding a directory with harbor-flavor.yaml."
+  proposedApp: "Grok App → Experimentals → Harbor Flavors → Premium+ Submit (not shipped)."
