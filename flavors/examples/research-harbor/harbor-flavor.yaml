@@ -1,0 +1,82 @@
+apiVersion: harbor-flavor/1.0
+kind: Flavor
+
+metadata:
+  id: research-harbor
+  name: Research Harbor
+  version: 1.0.0
+  authors:
+    - name: FreshOS Development Collective
+      github: djlacavera21
+  license: MIT
+  tags: [research, archives, offline, example]
+  visibility: public
+  created: 2026-08-27
+  homepage: https://github.com/djlacavera21/freshos-zen-garden
+
+base:
+  project: freshos-zen-garden
+  version: "1.0"
+  minCompatible: "1.0"
+  notes: "Example community flavor — research and archives emphasized."
+
+intent:
+  summary: >
+    Quieter garden, research pipelines on, commerce and broadcast modules off
+    by default. Built for source verification, synthesis, and long memory.
+  emperorGoals:
+    - research sovereignty
+    - source verification
+    - long-term archives
+  agency: graduated
+
+modules:
+  enable:
+    - research
+    - archives
+    - crew
+  disable:
+    - finance
+    - publishing
+  optional:
+    - war-room
+    - design
+
+packages:
+  extra:
+    - ripgrep
+    - fd-find
+    - pandoc
+    - sqlite3
+    - jq
+    - git
+  remove: []
+
+theme:
+  visualizer: visualizer/theme.json
+  plymouth: zen-garden
+  cinnamonPreset: zen-quiet
+  accent: "#7a8f6a"
+
+grok:
+  enabled: optional
+  personality: prompts/zen-master.md
+  defaultModelHint: grok-4
+  requireApiKey: false
+
+services:
+  visualizer: true
+  zenMaster: optional
+  extraSystemd: []
+
+network:
+  telemetry: false
+  outboundDefault: operator
+  allowedLocalPorts: [8080, 4200]
+
+safety:
+  hooksAllowed: false
+  hooksMustBeReviewed: true
+  noKernelModules: true
+  noSetuid: true
+  noHiddenCron: true

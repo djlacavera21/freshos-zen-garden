@@ -1,0 +1,79 @@
+apiVersion: harbor-flavor/1.0
+kind: Flavor
+
+metadata:
+  id: war-room-harbor
+  name: War Room Harbor
+  version: 1.0.0
+  authors:
+    - name: FreshOS Development Collective
+      github: djlacavera21
+  license: MIT
+  tags: [strategy, war-room, alliances, example]
+  visibility: public
+  created: 2026-08-27
+  homepage: https://github.com/djlacavera21/freshos-zen-garden
+
+base:
+  project: freshos-zen-garden
+  version: "1.0"
+  minCompatible: "1.0"
+  notes: "Example flavor — scenario modeling and alliance mapping."
+
+intent:
+  summary: >
+    Strategic planning overlay. War Room and Archives on. Publishing optional.
+    Visualizer emphasizes bridges and lanterns (relationships).
+  emperorGoals:
+    - strategic planning
+    - alliance mapping
+    - scenario discipline
+  agency: graduated
+
+modules:
+  enable:
+    - war-room
+    - archives
+    - research
+    - crew
+  disable:
+    - finance
+  optional:
+    - publishing
+    - design
+
+packages:
+  extra:
+    - graphviz
+    - jq
+    - sqlite3
+  remove: []
+
+theme:
+  visualizer: visualizer/theme.json
+  plymouth: zen-garden
+  cinnamonPreset: zen-garden
+  accent: "#8b3a3a"
+
+grok:
+  enabled: optional
+  personality: prompts/zen-master.md
+  defaultModelHint: grok-4
+  requireApiKey: false
+
+services:
+  visualizer: true
+  zenMaster: optional
+  extraSystemd: []
+
+network:
+  telemetry: false
+  outboundDefault: operator
+  allowedLocalPorts: [8080, 4200]
+
+safety:
+  hooksAllowed: false
+  hooksMustBeReviewed: true
+  noKernelModules: true
+  noSetuid: true
+  noHiddenCron: true

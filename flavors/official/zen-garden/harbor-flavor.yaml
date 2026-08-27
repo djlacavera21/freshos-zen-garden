@@ -1,0 +1,78 @@
+apiVersion: harbor-flavor/1.0
+kind: Flavor
+
+metadata:
+  id: zen-garden
+  name: FreshOS Zen Garden
+  version: 1.0.0
+  authors:
+    - name: FreshOS Development Collective
+      github: djlacavera21
+  license: MIT
+  tags: [official, zen-garden, aligned, sovereign]
+  visibility: public
+  created: 2026-07-01
+  homepage: https://github.com/djlacavera21/freshos-zen-garden
+
+base:
+  project: freshos-zen-garden
+  version: "1.0"
+  minCompatible: "1.0"
+  notes: "Linux Mint 22.3 Zena Cinnamon. This flavor IS the official base profile."
+
+intent:
+  summary: >
+    Official aligned profile. All empire modules available, Zen Garden
+    visualizer on :8080, optional Grok Vizier on :4200, offline-first.
+  emperorGoals:
+    - sovereignty first
+    - visual clarity
+    - value coherence
+    - graduated agency
+    - long-term orientation
+  agency: graduated
+
+modules:
+  enable:
+    - research
+    - design
+    - publishing
+    - war-room
+    - finance
+    - archives
+    - crew
+  disable: []
+  optional: []
+
+packages:
+  extra: []
+  remove: []
+
+theme:
+  visualizer: visualizer/theme.json
+  plymouth: zen-garden
+  cinnamonPreset: zen-garden
+  accent: "#c4a35a"
+
+grok:
+  enabled: optional
+  personality: prompts/zen-master.md
+  defaultModelHint: grok-4
+  requireApiKey: false
+
+services:
+  visualizer: true
+  zenMaster: optional
+  extraSystemd: []
+
+network:
+  telemetry: false
+  outboundDefault: operator
+  allowedLocalPorts: [8080, 4200]
+
+safety:
+  hooksAllowed: false
+  hooksMustBeReviewed: true
+  noKernelModules: true
+  noSetuid: true
+  noHiddenCron: true

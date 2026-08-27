@@ -1,0 +1,80 @@
+apiVersion: harbor-flavor/1.0
+kind: Flavor
+
+metadata:
+  id: airgap-tui
+  name: Air-Gap TUI Station
+  version: 1.0.0
+  authors:
+    - name: FreshOS Development Collective
+      github: djlacavera21
+  license: MIT
+  tags: [airgap, tui, minimal, sovereignty, example]
+  visibility: public
+  created: 2026-08-27
+  homepage: https://github.com/djlacavera21/freshos-zen-garden
+
+base:
+  project: freshos-zen-garden
+  version: "1.0"
+  minCompatible: "1.0"
+  notes: "Phase-3-shaped example. Visualizer still ships as files but is not required at runtime."
+
+intent:
+  summary: >
+    Minimal, high-sovereignty station profile. No assumption of a display
+    server. Grok API key optional and unused unless the operator reconnects.
+  emperorGoals:
+    - air-gapped operation
+    - minimal attack surface
+    - durable notes
+  agency: manual
+
+modules:
+  enable:
+    - archives
+    - crew
+    - research
+  disable:
+    - publishing
+    - finance
+    - design
+  optional:
+    - war-room
+
+packages:
+  extra:
+    - tmux
+    - neovim
+    - ripgrep
+    - sqlite3
+  remove: []
+
+theme:
+  visualizer: visualizer/theme.json
+  plymouth: zen-garden
+  cinnamonPreset: null
+  accent: "#9aa58e"
+
+grok:
+  enabled: false
+  personality: prompts/zen-master.md
+  defaultModelHint: grok-4
+  requireApiKey: false
+
+services:
+  visualizer: false
+  zenMaster: false
+  extraSystemd: []
+
+network:
+  telemetry: false
+  outboundDefault: operator
+  allowedLocalPorts: []
+
+safety:
+  hooksAllowed: false
+  hooksMustBeReviewed: true
+  noKernelModules: true
+  noSetuid: true
+  noHiddenCron: true
