@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FreshOS — Zen Garden</title>
+  <link rel="stylesheet" href="garden.css" />
+</head>
+<body>
+  <header class="mast">
+    <div>
+      <p class="kicker">FreshOS 1.0 · Harbor Visualizer</p>
+      <h1>Zen Garden</h1>
+    </div>
+    <p class="epigraph">The operator remains Emperor. Grok is Vizier.</p>
+  </header>
+  <main>
+    <canvas id="garden" width="1280" height="720" aria-label="Living zen garden representing system state"></canvas>
+    <aside class="legend">
+      <ul>
+        <li><span class="swatch sand"></span> Sand — CPU / load</li>
+        <li><span class="swatch stone"></span> Stones — memory &amp; processes</li>
+        <li><span class="swatch lantern"></span> Lanterns — network &amp; alliances</li>
+        <li><span class="swatch orb"></span> Orb — aligned intelligence</li>
+      </ul>
+      <dl id="metrics">
+        <div><dt>Load</dt><dd id="m-load">—</dd></div>
+        <div><dt>Memory</dt><dd id="m-mem">—</dd></div>
+        <div><dt>Links</dt><dd id="m-net">—</dd></div>
+        <div><dt>Flavor</dt><dd id="m-flavor">zen-garden</dd></div>
+      </dl>
+    </aside>
+  </main>
+  <footer>
+    <a href="https://github.com/djlacavera21/freshos-zen-garden">Independent source</a>
+    <span>·</span>
+    <span>localhost:8080</span>
+    <span>·</span>
+    <span>No telemetry</span>
+  </footer>
+  <script src="garden.js"></script>
+</body>
+</html>

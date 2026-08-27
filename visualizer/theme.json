@@ -1,0 +1,16 @@
+{
+  "name": "zen-garden",
+  "sand": "#cbb98a",
+  "sandRake": "#b9a574",
+  "moss": "#5c6b4a",
+  "stone": "#6d6a63",
+  "stoneHighlight": "#8a8680",
+  "water": "#6a7d7a",
+  "lanternGlow": "#e6c36a",
+  "bridge": "#7a5a3a",
+  "orbCore": "#f3e6c0",
+  "orbHalo": "#c4a35a",
+  "sky": "#1b1d1a",
+  "fog": "rgba(27,29,26,0.35)",
+  "caption": "#d9d0b8"
+}
