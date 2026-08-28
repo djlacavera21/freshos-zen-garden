@@ -1,0 +1,34 @@
+:root {
+  --ink: #e8e0d0;
+  --muted: #9a8f7a;
+  --sand: #c4b49a;
+  --stone: #6b6358;
+  --moss: #3d4a3a;
+  --gold: #c4a35a;
+  --orb: #7ec8c4;
+  --bg: #14120f;
+  --panel: #1c1914;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 "Source Serif 4", Georgia, serif; }
+.mast, footer { display: flex; justify-content: space-between; align-items: baseline; padding: 1.2rem 1.6rem; gap: 1rem; }
+.kicker { letter-spacing: .14em; text-transform: uppercase; font-size: .7rem; color: var(--gold); margin: 0; }
+h1 { margin: .15rem 0 0; font-weight: 500; font-size: 1.8rem; }
+.epigraph { color: var(--muted); font-style: italic; }
+main { display: grid; grid-template-columns: 1fr 240px; gap: 1rem; padding: 0 1.6rem 1.6rem; }
+#garden { width: 100%; height: auto; background: #1a1814; border: 1px solid #2a2620; border-radius: 8px; }
+.legend { background: var(--panel); border: 1px solid #2a2620; border-radius: 8px; padding: 1rem; }
+.legend ul { list-style: none; padding: 0; margin: 0 0 1rem; }
+.legend li { display: flex; gap: .5rem; align-items: center; margin: .35rem 0; color: var(--muted); }
+.swatch { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.swatch.sand { background: var(--sand); }
+.swatch.stone { background: var(--stone); }
+.swatch.lantern { background: var(--gold); }
+.swatch.orb { background: var(--orb); box-shadow: 0 0 8px var(--orb); }
+dl { display: grid; gap: .4rem; margin: 0; }
+dl div { display: flex; justify-content: space-between; border-top: 1px solid #2a2620; padding-top: .35rem; }
+dt { color: var(--muted); }
+dd { margin: 0; }
+footer { color: var(--muted); font-size: .85rem; }
+footer a { color: var(--gold); }
+@media (max-width: 800px) { main { grid-template-columns: 1fr; } }
