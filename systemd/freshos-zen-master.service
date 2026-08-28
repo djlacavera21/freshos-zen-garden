@@ -1,0 +1,13 @@
+[Unit]
+Description=FreshOS Grok Zen Master (optional Vizier)
+After=network.target
+
+[Service]
+Type=simple
+Environment=FRESHOS_SHARE=/usr/local/share/freshos
+WorkingDirectory=/usr/local/share/freshos/grok-zen-master
+ExecStart=/usr/bin/python3 -m uvicorn app:app --host 127.0.0.1 --port 4200
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
