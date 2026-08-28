@@ -2,7 +2,7 @@
 # Premium+ upload is a proposed App feature; this file is the working catalog.
 apiVersion: harbor-catalog/1.0
 source: https://github.com/djlacavera21/freshos-zen-garden
-updated: 2026-08-27
+updated: 2026-08-28
 flavors:
   - id: zen-garden
     name: FreshOS Zen Garden
