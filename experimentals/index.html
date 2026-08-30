@@ -1,100 +1,44 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Experimentals — Harbor OS</title>
-<style>
-:root{--bg:#0b0c0e;--panel:#14161a;--line:#2a2e35;--ink:#e8eaed;--muted:#9aa0a6;--gold:#c4a35a;--teal:#7ec8c4}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 sans-serif}
-header.app{display:flex;justify-content:space-between;align-items:center;padding:.8rem 1.2rem;border-bottom:1px solid var(--line);background:#101216}
-.orb{width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#cffffb,#7ec8c4 45%,#2b5c5a)}
-.brand{display:flex;gap:.7rem;align-items:center}.brand h1{font-size:1rem;margin:0}.brand span{color:var(--muted);font-size:.8rem}
-nav.tabs{display:flex;gap:.3rem;padding:.6rem 1.2rem;border-bottom:1px solid var(--line);flex-wrap:wrap}
-nav.tabs button{background:transparent;color:var(--muted);border:1px solid transparent;padding:.45rem .8rem;border-radius:999px;cursor:pointer;font:inherit}
-nav.tabs button.on{color:var(--ink);border-color:var(--line);background:var(--panel)}
-main{max-width:1080px;margin:0 auto;padding:1.4rem 1.2rem 4rem}
-.banner{border:1px solid #3a3424;background:#1a170f;color:#e6d7a8;padding:.85rem 1rem;border-radius:10px;margin-bottom:1.2rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.9rem}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:1rem}
-.tag{display:inline-block;font-size:.7rem;letter-spacing:.04em;text-transform:uppercase;color:var(--gold);border:1px solid #3a3424;padding:.1rem .4rem;border-radius:4px}
-.tag.community{color:var(--teal);border-color:#2a4443}
-a.btn,button.btn{display:inline-block;margin-top:.7rem;background:#1f232b;color:var(--ink);border:1px solid var(--line);padding:.45rem .75rem;border-radius:8px;text-decoration:none;cursor:pointer;font:inherit}
-a.btn.primary,button.btn.primary{background:#2a2416;border-color:#5a4a22;color:#f0e2b8}
-label{display:block;margin:.7rem 0 .25rem;color:var(--muted);font-size:.85rem}
-input,textarea{width:100%;background:#0e1013;color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:.55rem .7rem;font:inherit}
-textarea{min-height:80px;font-family:ui-monospace,monospace;font-size:.85rem}
-pre.yaml{background:#0e1013;border:1px solid var(--line);border-radius:8px;padding:.8rem;overflow:auto;font-size:.8rem;color:#d6c7a4}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-.hidden{display:none}p.lead{color:var(--muted)}footer{color:var(--muted);font-size:.8rem;margin-top:2rem}footer a{color:var(--gold)}
-@media(max-width:700px){.row{grid-template-columns:1fr}}
-</style></head>
+<link rel="stylesheet" href="data:text/css,body{margin:0;background:#0b0c0e;color:#e8eaed;font:15px/1.55 sans-serif}header,nav,main{max-width:1080px;margin:0 auto;padding:1rem}a{color:#c4a35a}"/>
+</head>
 <body>
-<header class="app"><div class="brand"><div class="orb"></div><div><h1>Grok · Experimentals</h1><span>Independent Harbor OS surface · not an official xAI client tab</span></div></div><span class="tag">FreshOS 1.0</span></header>
-<nav class="tabs">
-<button class="on" data-tab="official">Official image</button>
-<button data-tab="flavors">Harbor Flavors</button>
-<button data-tab="submit">Premium+ submit</button>
-<button data-tab="alignment">Alignment</button>
-</nav>
+<header>
+<h1>Grok · Experimentals</h1>
+<p>Independent Harbor OS surface — not an official xAI client tab.</p>
+<p>Portal: <a href="https://djlacavera21.github.io/freshos-zen-garden/">djlacavera21.github.io/freshos-zen-garden</a></p>
+<p>Source: <a href="https://github.com/djlacavera21/freshos-zen-garden">github.com/djlacavera21/freshos-zen-garden</a></p>
+</header>
 <main>
-<div class="banner">Grok cannot add an Experimentals tab to the official Grok App. This page is the sovereign stand-in: official download instructions, the Harbor Flavor catalog, and the Premium+ upload analog.</div>
-<section id="tab-official">
-<h2>Harbor OS — official base</h2>
-<p class="lead">FreshOS Zen Garden Edition. Linux Mint 22.3 Cinnamon, offline-first, Grok as Vizier.</p>
-<div class="grid">
-<article class="card"><span class="tag">Independent link</span><h3>Source of truth</h3><p>The only bytes this project vouches for live in GitHub.</p><a class="btn primary" href="https://github.com/djlacavera21/freshos-zen-garden">github.com/djlacavera21/freshos-zen-garden</a></article>
-<article class="card"><span class="tag">Path A</span><h3>Live Mint → FreshOS</h3><pre class="yaml">git clone https://github.com/djlacavera21/freshos-zen-garden.git
+<section>
+<h2>Official image</h2>
+<p>FreshOS Zen Garden Edition. Linux Mint 22.3 Cinnamon. Offline-first. Grok as Vizier.</p>
+<pre>git clone https://github.com/djlacavera21/freshos-zen-garden.git
 cd freshos-zen-garden
-sudo ./scripts/customize-freshos.sh</pre></article>
-<article class="card"><span class="tag">Path B</span><h3>Cubic ISO</h3><p>Download Linux Mint 22.3 yourself. Point Cubic at it. Run the customize script in the chroot.</p><a class="btn" href="https://github.com/djlacavera21/freshos-zen-garden/tree/main/iso-build">ISO notes</a></article>
-<article class="card"><span class="tag">Sibling</span><h3>Grapefruit-OS</h3><p>Isolation-first live-build tree.</p><a class="btn" href="https://github.com/djlacavera21/Grapefruit-OS">Open Grapefruit-OS</a></article>
-</div>
+sudo ./scripts/customize-freshos.sh</pre>
+<p>Cubic recipe: iso-build/CUBIC.md. Sibling: Grapefruit-OS.</p>
 </section>
-<section id="tab-flavors" class="hidden">
-<h2>Harbor Flavors</h2>
-<p class="lead">Overlays, not replacement ISOs. This is what a Grok App submenu would list.</p>
-<div class="grid" id="flavor-grid"></div>
+<section>
+<h2>Harbor Flavors submenu</h2>
+<p>What a Premium+ Grok App submenu would list. Browse is open. Submit is the gated pane.</p>
+<ul>
+<li>zen-garden — official</li>
+<li>research-harbor — community example</li>
+<li>war-room-harbor — community example</li>
+<li>airgap-tui — community example</li>
+</ul>
+<p>Inspect YAML under flavors/ in the source tree.</p>
 </section>
-<section id="tab-submit" class="hidden">
+<section>
 <h2>Premium+ submit analog</h2>
-<p class="lead">A future official App would gate this pane on X Premium+. Here anyone can author; merging still needs human review.</p>
-<div class="card">
-<div class="row"><div><label>Flavor id</label><input id="fid" value="my-harbor"/></div><div><label>Display name</label><input id="fname" value="My Harbor"/></div></div>
-<label>Intent</label><textarea id="fsum">Research-first overlay. Quieter garden, archives enabled.</textarea>
-<div class="row"><div><label>Modules</label><input id="fmod" value="research, archives, crew"/></div><div><label>GitHub username</label><input id="fauthor" value="djlacavera21"/></div></div>
-<button class="btn primary" id="gen">Generate flavor + PR link</button>
-<label>harbor-flavor.yaml</label><pre class="yaml" id="out"></pre><p id="prwrap"></p>
-</div></section>
-<section id="tab-alignment" class="hidden">
-<h2>Alignment</h2>
-<div class="grid">
-<article class="card"><h3>Sovereignty First</h3><p>No ongoing cloud account after setup.</p></article>
-<article class="card"><h3>Visual Clarity</h3><p>CPU is sand. Memory is stone. Links are lanterns.</p></article>
-<article class="card"><h3>Value Coherence</h3><p>Defaults must match the operator’s stated goals.</p></article>
-<article class="card"><h3>Graduated Agency</h3><p>Emperor / Vizier. Plans visible. Overrides cheap.</p></article>
-<article class="card"><h3>Long-Term Orientation</h3><p>Multi-year contribution over notification volume.</p></article>
-</div></section>
-<footer>Independent catalog · <a href="https://github.com/djlacavera21/freshos-zen-garden">freshos-zen-garden</a> · harboros.ai is unrelated</footer>
+<p>Official App would require X Premium+. Here anyone can author; merge still needs human review. No ISO, kernel module, or setuid binary.</p>
+<p>Open a PR adding flavors/community/&lt;id&gt;/harbor-flavor.yaml using schema harbor-flavor/1.0.</p>
+<p><a href="https://github.com/djlacavera21/freshos-zen-garden/compare/main?quick_pull=1">Open GitHub compare / PR</a></p>
+</section>
 </main>
-<script>
-const flavors=[
-{id:"zen-garden",name:"FreshOS Zen Garden",official:true,blurb:"Full module set, visualizer on :8080.",path:"flavors/official/zen-garden"},
-{id:"research-harbor",name:"Research Harbor",official:false,blurb:"Archives first. Quieter lanterns.",path:"flavors/examples/research-harbor"},
-{id:"war-room-harbor",name:"War Room Harbor",official:false,blurb:"Scenario mapping and alliance bridges.",path:"flavors/examples/war-room-harbor"},
-{id:"airgap-tui",name:"Air-Gap TUI Station",official:false,blurb:"Minimal surface, no extra outbound.",path:"flavors/examples/airgap-tui"}
-];
-const grid=document.getElementById("flavor-grid");
-flavors.forEach(f=>{const a=document.createElement("article");a.className="card";a.innerHTML=`<span class="tag ${f.official?"":"community"}">${f.official?"Official":"Community"}</span><h3>${f.name}</h3><p>${f.blurb}</p><p><code>${f.id}</code></p><a class="btn" href="https://github.com/djlacavera21/freshos-zen-garden/tree/main/${f.path}">Inspect YAML</a>`;grid.appendChild(a);});
-document.querySelectorAll("nav.tabs button").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll("nav.tabs button").forEach(b=>b.classList.remove("on"));btn.classList.add("on");["official","flavors","submit","alignment"].forEach(id=>document.getElementById("tab-"+id).classList.toggle("hidden",id!==btn.dataset.tab));}));
-function genYaml(){
-const id=document.getElementById("fid").value.trim()||"my-harbor";
-const name=document.getElementById("fname").value.trim()||id;
-const summary=document.getElementById("fsum").value.trim();
-const mods=document.getElementById("fmod").value.split(",").map(s=>s.trim()).filter(Boolean);
-const author=document.getElementById("fauthor").value.trim()||"operator";
-const yaml=`apiVersion: harbor-flavor/1.0\nkind: Flavor\nmetadata:\n  id: ${id}\n  name: ${name}\n  version: 1.0.0\n  authors:\n    - name: ${author}\n      github: ${author}\n  license: MIT\nbase:\n  project: freshos-zen-garden\n  version: "1.0"\nintent:\n  summary: >\n    ${summary}\n  agency: graduated\nmodules:\n  enable:\n${mods.map(m=>"    - "+m).join("\n")}\nnetwork:\n  telemetry: false\n  outboundDefault: operator\nsafety:\n  hooksAllowed: false\n  hooksMustBeReviewed: true\n  noKernelModules: true\n  noSetuid: true\n  noHiddenCron: true\n`;
-document.getElementById("out").textContent=yaml;
-const title=encodeURIComponent("Harbor Flavor: "+id);
-const body=encodeURIComponent("New community flavor `"+id+"`. Review against docs/FLAVOR-SPEC.md.");
-document.getElementById("prwrap").innerHTML='<a class="btn primary" href="https://github.com/djlacavera21/freshos-zen-garden/compare/main?quick_pull=1&title='+title+'&body='+body+'">Open GitHub compare / PR</a>';
-}
-document.getElementById("gen").addEventListener("click",genYaml);genYaml();
-</script></body></html>
+</body>
+</html>
