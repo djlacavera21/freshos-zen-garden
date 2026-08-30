@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Harbor Experimentals
+Comment=Official download surface and Harbor Flavor catalog
+Exec=xdg-open https://djlacavera21.github.io/freshos-zen-garden/
+Icon=applications-internet
+Terminal=false
+Categories=Network;Documentation;

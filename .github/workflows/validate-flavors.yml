@@ -1,0 +1,32 @@
+name: Validate Harbor Flavors
+
+on:
+  push:
+    paths:
+      - "flavors/**"
+      - "catalog/**"
+      - "scripts/validate-flavor.sh"
+      - "docs/FLAVOR-SPEC.md"
+  pull_request:
+    paths:
+      - "flavors/**"
+      - "catalog/**"
+      - "scripts/validate-flavor.sh"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate every flavor directory
+        run: |
+          set -euo pipefail
+          chmod +x scripts/validate-flavor.sh
+          fail=0
+          while IFS= read -r dir; do
+            echo "== $dir =="
+            if ! ./scripts/validate-flavor.sh "$dir"; then
+              fail=1
+            fi
+          done < <(find flavors -name harbor-flavor.yaml -printf '%h\n' | sort)
+          exit "$fail"

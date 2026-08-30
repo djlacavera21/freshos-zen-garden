@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=FreshOS Zen Garden
+Comment=Meditative empire visualizer
+Exec=freshos-visualizer
+Icon=preferences-system
+Terminal=false
+Categories=System;Monitor;
+StartupNotify=false
+X-GNOME-Autostart-enabled=true
