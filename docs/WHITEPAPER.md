@@ -1,37 +1,40 @@
-# FreshOS Zen Garden Edition — Automation Alignment Whitepaper
+# FreshOS Zen Garden Edition
 
-Version 1.1 · August 2026  
-Prepared by The Temple of Osiris / FreshOS Development Collective  
-In collaboration with Grok (xAI)
+## Automation Alignment Whitepaper
 
-The v1.0 body lives in the operator archive and is summarized here so the public tree stays reviewable.
+**A Sovereign, Grok-Powered Multi-Agent Platform for Aligned Digital Empire Construction**
 
-## Executive claim
+**Version 1.0**  
+**July 2026**
 
-FreshOS is a Linux Mint 22.3 Cinnamon derivative plus a Grok-orchestrated module layer, designed around five alignment principles: Sovereignty First, Visual Clarity, Value Coherence, Graduated Agency, Long-Term Orientation.
+**Prepared by:** The Temple of Osiris / FreshOS Development Collective  
+**In Collaboration with:** Grok (xAI)
 
-Visualization is a Zen Garden (sand = load, stones = memory, lanterns = links, orb = Vizier), not a dashboard. Deployment is one-command on a live Mint box or Cubic chroot. No ongoing cloud account is required after setup.
+---
 
-Empire organs: Research, Design, Publishing, War Room, Finance, Archives, Crew Quarters.
+### Executive Summary
 
-Roadmap phases 1–5 remain as in the July 2026 whitepaper (core ISO → module pipelines → TUI Agent Station → persistent memory / signed outputs → physical-world interfaces where lawful).
+FreshOS Zen Garden Edition is a fully packaged, bootable Linux distribution and multi-agent automation platform designed from the ground up for individuals and visionaries engaged in sovereign digital empire building.
 
-## Addendum — Experimentals and Harbor Flavors
+Alignment layers: Value, Operational, Visualization (Zen Garden), Sovereignty.
 
-Requested after v1.0: a full OS with an independent download link under a Grok App **Experimentals** tab, plus a Premium+ submenu to upload Harbor OS flavors.
+Base: Linux Mint 22.3 Cinnamon. Visualizer on :8080. Optional Grok Zen Master on :4200. Modules: Research, Design, Publishing, War Room, Finance, Archives, Crew.
 
-What shipped in this repository:
+Principles: Sovereignty First, Visual Clarity, Value Coherence, Graduated Agency, Long-Term Orientation.
 
-- Independent source: https://github.com/djlacavera21/freshos-zen-garden
-- Experimentals UI analog: `experimentals/index.html`
-- Flavor schema: `docs/FLAVOR-SPEC.md`
-- Official + example flavors under `flavors/`
+The full v1.0 body is in the operator archive and mirrored in this tree. Deployment is one-command on live Mint or Cubic chroot. No ongoing cloud account after setup.
 
-What cannot ship from Grok-the-model:
+---
 
-- A new tab inside the official Grok iOS / Android / web clients
-- An xAI-hosted multi-gigabyte ISO inside the App Store binary
+## Addendum — Experimentals and Harbor Flavors (August 2026)
 
-Premium+ remains a proposed *client gate*. The working upload path is a GitHub pull request of a `harbor-flavor.yaml` directory. See `docs/EXPERIMENTALS.md`.
+Independent source: https://github.com/djlacavera21/freshos-zen-garden  
+Public Experimentals portal: https://djlacavera21.github.io/freshos-zen-garden/
+
+Requested after v1.0: a full OS with an independent download link under a Grok App Experimentals tab, plus a Premium+ submenu to upload Harbor OS flavors.
+
+Shipped: Experimentals UI analog, flavor schema, official + example flavors, customize/apply/validate scripts, first-boot welcome, Cubic recipe, GitHub Pages workflow.
+
+Not shippable from Grok-the-model: a new tab inside official Grok clients, or an xAI-hosted multi-gigabyte ISO inside the App Store binary. Premium+ is a proposed client gate. Working upload path: a GitHub pull request of a harbor-flavor.yaml directory. See docs/EXPERIMENTALS.md.
 
 Name collision: https://harboros.ai/ is an unrelated commercial workstation product.

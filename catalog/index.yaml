@@ -1,8 +1,7 @@
-# Harbor Flavor catalog — independent of the Grok App.
-# Premium+ upload is a proposed App feature; this file is the working catalog.
 apiVersion: harbor-catalog/1.0
 source: https://github.com/djlacavera21/freshos-zen-garden
-updated: 2026-08-28
+portal: https://djlacavera21.github.io/freshos-zen-garden/
+updated: 2026-08-30
 flavors:
   - id: zen-garden
     name: FreshOS Zen Garden
@@ -33,5 +32,5 @@ flavors:
     review: example
     tags: [airgap, tui, minimal]
 submit:
-  today: "Open a pull request adding a directory with harbor-flavor.yaml."
-  proposedApp: "Grok App → Experimentals → Harbor Flavors → Premium+ Submit (not shipped)."
+  today: Open a pull request adding a directory with harbor-flavor.yaml.
+  proposedApp: Grok App to Experimentals to Harbor Flavors to Premium+ Submit (not shipped).
